@@ -11,6 +11,7 @@ namespace Crud_Proyec.Controllers
 {
     public class UsuarioController : Controller
     {
+        [Authorize]
         // GET: Usuario
         public ActionResult Index()
         {
@@ -130,6 +131,11 @@ namespace Crud_Proyec.Controllers
             }
         }
 
+        public ActionResult Test()
+        {
+            return View();
+        }
+
         public ActionResult Login(string message = "")
         {
             ViewBag.Message = message;
@@ -157,5 +163,11 @@ namespace Crud_Proyec.Controllers
             }
         }
 
+        [Authorize]
+        public ActionResult CloseSession()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Index", "Home");
+        }
     }
 }
