@@ -19,16 +19,16 @@ namespace Crud_Proyec.Controllers
         }
 
 
-        public static string NProducto(int idNProducto)
+        public static string    IMGProducto(int idIMGProducto)
         {
             using (var db = new inventario2021Entities())
             {
-                return db.producto.Find(idNProducto).nombre;
+                return db.producto.Find(idIMGProducto).nombre;
             }
         }
 
 
-        public ActionResult ListarNProducto()
+        public ActionResult ListarIMGProducto()
         {
             using (var db = new inventario2021Entities())
             {

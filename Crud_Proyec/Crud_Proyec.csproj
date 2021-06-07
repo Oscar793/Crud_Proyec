@@ -323,6 +323,11 @@
     <Content Include="Views\ProductoCompra\Delete.cshtml" />
     <Content Include="Views\ProductoCompra\Edit.cshtml" />
     <Content Include="Views\ProductoImagen\Index.cshtml" />
+    <Content Include="Views\ProductoImagen\ListarIMGProducto.cshtml" />
+    <Content Include="Views\ProductoImagen\Create.cshtml" />
+    <Content Include="Views\ProductoImagen\Details.cshtml" />
+    <Content Include="Views\ProductoImagen\Delete.cshtml" />
+    <Content Include="Views\ProductoImagen\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
