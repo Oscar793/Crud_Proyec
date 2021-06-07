@@ -131,10 +131,7 @@ namespace Crud_Proyec.Controllers
             }
         }
 
-        public ActionResult Test()
-        {
-            return View();
-        }
+        
 
         public ActionResult Login(string message = "")
         {
