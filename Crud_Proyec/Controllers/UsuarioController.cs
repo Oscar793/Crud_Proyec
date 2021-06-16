@@ -11,7 +11,7 @@ namespace Crud_Proyec.Controllers
 {
     public class UsuarioController : Controller
     {
-        [Authorize]
+       
         // GET: Usuario
         public ActionResult Index()
         {
@@ -88,6 +88,9 @@ namespace Crud_Proyec.Controllers
 
         public ActionResult Edit(usuario usuarioEdit)
         {
+            if (!ModelState.IsValid)
+                return View();
+
             try
             {
                 using (var db = new inventario2021Entities())
@@ -131,7 +134,12 @@ namespace Crud_Proyec.Controllers
             }
         }
 
-        
+        public ActionResult Test()
+        {
+            return View();
+        }
+
+
 
         public ActionResult Login(string message = "")
         {

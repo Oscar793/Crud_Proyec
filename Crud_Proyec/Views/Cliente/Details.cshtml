@@ -1,50 +1,42 @@
-﻿@model Crud_Proyec.Models.compra
+﻿@model Crud_Proyec.Models.cliente
 
 @{
     ViewBag.Title = "Details";
+    var nombreCliente = Model.nombre;
 }
 
-<h2>Details</h2>
+<h2>Detalles</h2>
 
 <div>
-    <h4>compra</h4>
+    <h4>Cliente</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.fecha)
+            Nombre
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.fecha)
+            @Html.DisplayFor(model => model.nombre)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.total)
+            Documento
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.total)
+            @Html.DisplayFor(model => model.documento)
         </dd>
-
         <dt>
-            @Html.DisplayNameFor(model => model.cliente.nombre)
+            Email
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.cliente.nombre)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.usuario.nombre)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.usuario.nombre)
+            @Html.DisplayFor(model => model.email)
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar el cliente: " + nombreCliente, "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Regresar a la Lista", "Index")
 </p>

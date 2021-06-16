@@ -7,7 +7,7 @@ using Crud_Proyec.Models;
 
 namespace Crud_Proyec.Controllers
 {
-    public class Comprasontroller : Controller
+    public class ComprasController : Controller
     {
         // GET: Comprasontroller
         public ActionResult Index()

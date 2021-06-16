@@ -11,6 +11,8 @@ namespace Crud_Proyec.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+
     
     public partial class usuario
     {
@@ -20,13 +22,25 @@ namespace Crud_Proyec.Models
             this.compra = new HashSet<compra>();
             this.usuariorol = new HashSet<usuariorol>();
         }
-    
+        
         public int id { get; set; }
+
+        [Required(ErrorMessage ="Este campo no puede ir vacio")]
+        [StringLength(20, ErrorMessage = "A sumeperado el limte de caracteres")]
         public string nombre { get; set; }
+
+        [Required(ErrorMessage = "Este campo no puede ir vacio")]
         public string apellido { get; set; }
+
+        [Required(ErrorMessage = "Este campo no puede ir vacio")]
         public System.DateTime fecha_nacimiento { get; set; }
+
+        [Required(ErrorMessage = "Este campo no puede ir vacio")]
+        [EmailAddress]
         public string email { get; set; }
-        public string password { get; set; }
+
+        [Required(ErrorMessage = "Este campo no puede ir vacio")]
+        public string password { get; set; } 
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<compra> compra { get; set; }

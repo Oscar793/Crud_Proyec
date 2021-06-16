@@ -104,6 +104,8 @@ namespace Crud_Proyec.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(producto productoEdit)
         {
+            if (!ModelState.IsValid)
+                return View();
             try
             {
                 using (var db = new inventario2021Entities())
@@ -124,6 +126,35 @@ namespace Crud_Proyec.Controllers
                 ModelState.AddModelError("", "error " + ex);
                 return View();
             }
+
+           
         }
+
+        public ActionResult Reporte()
+        {
+            try
+            {
+                var db = new inventario2021Entities();
+                var query = from tabProveedor in db.proveedor
+                            join tabPrducto in db.producto on tabProveedor.id equals tabPrducto.id_proveedor
+                            select new Reporte
+                            {
+                                nombreProducto = tabProveedor.nombre,
+                                telefonoProveedor = tabProveedor.telefono,
+                                direccionProveedor = tabProveedor.direccion,
+                                nombreProveedor = tabPrducto.nombre,
+                                precioProducto = tabPrducto.percio_unitario
+
+                            };
+                return View(query);
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", "error " + ex);
+                return View();
+            }
+        }
+
+
     }
 }

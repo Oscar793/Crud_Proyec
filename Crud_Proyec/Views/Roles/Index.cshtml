@@ -1,10 +1,10 @@
-﻿@model IEnumerable<Crud_Proyec.Models.producto_imagen>
+﻿@model IEnumerable<Crud_Proyec.Models.roles>
 
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Image del producto</h2>
+<h2>Roles</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -12,10 +12,7 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.imagen)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.producto.nombre)
+            @Html.DisplayNameFor(model => model.descripcion)
         </th>
         <th></th>
     </tr>
@@ -23,10 +20,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.imagen)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.producto.nombre)
+            @Html.DisplayFor(modelItem => item.descripcion)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
@@ -37,3 +31,12 @@
 }
 
 </table>
+@section scripts{
+    <script>
+        $(".linkDelete").click(function (event) {
+            if (!confirm('¿ Esta seguro de eliminar ?')) {
+                event.preventDefault();
+            }
+        })
+    </script>
+}
