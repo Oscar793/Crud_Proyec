@@ -17,7 +17,10 @@ namespace Crud_Proyec.Controllers
                 return View(db.proveedor.ToList());
             }
         }
-
+        public ActionResult Create()
+        {
+            return View();
+        }
 
         [HttpPost]
         [ValidateAntiForgeryToken]

@@ -22,14 +22,40 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+
                     <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Iniciar Sesion", "Login", "Usuario")</li>
+                    <li>@Html.ActionLink("Sobre mi", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Iniciar Sesion", "Login", "Usuario")</li>
 
-                    @if (User.Identity.IsAuthenticated)
-                    {
-                        <li>@Html.ActionLink("CRUD Usuario", "Index", "Usuario")</li>
-                        <li>@Html.ActionLink("Salir", "CloseSession", "Usuario")</li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" data-toggle="dropdown" data-target="despegable" href="#">
+
+                            Menu desplegable
+
+                        </a>
+                        <div class="dropdown-menu">
+
+                            <a class="dropdown-item" href="#">@Html.ActionLink("Usuario", "Index", "Usuario")</a>
+                            <br />
+                            <a class="dropdown-item" href="#">@Html.ActionLink("Cliente", "Index", "Cliente")</a>
+                            <br />
+                            <a class="dropdown-item" href="#">@Html.ActionLink("Compra", "Index", "Compras")</a>
+                            <br />
+                            <a class="dropdown-item" href="#">@Html.ActionLink("Proveedor", "Index", "Proveedor")</a>
+                            <br />
+                            <a class="dropdown-item" href="#">@Html.ActionLink("Producto", "Index", "Producto")</a>
+                            <br />
+                            <a class="dropdown-item" href="#">@Html.ActionLink("Producto Imagen", "Index", "ProductoImagen")</a>
+                            <br />
+                            <a class="dropdown-item" href="#">@Html.ActionLink("Producto Compra", "Index", "ProductoCompra")</a>
+                            <br />
+                            <a class="dropdown-item" href="#">@Html.ActionLink("Roles", "Index", "Roles")</a>
+                            <br />
+                            <a class="dropdown-item" href="#">@Html.ActionLink("Salir", "CloseSession", "Usuario")</a>
+
+                        </div>
+                    </li>
                     }
                 </ul>
             </div>
@@ -39,7 +65,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+            <p>&copy; @DateTime.Now.Year - </p>
         </footer>
     </div>
 

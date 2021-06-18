@@ -11,7 +11,7 @@ namespace Crud_Proyec.Models
 {
     using System;
     using System.Collections.Generic;
-    
+
     public partial class compra
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,13 +19,13 @@ namespace Crud_Proyec.Models
         {
             this.producto_compra = new HashSet<producto_compra>();
         }
-    
+
         public int id { get; set; }
         public System.DateTime fecha { get; set; }
         public int total { get; set; }
         public int id_usuario { get; set; }
         public int id_cliente { get; set; }
-    
+
         public virtual cliente cliente { get; set; }
         public virtual usuario usuario { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
