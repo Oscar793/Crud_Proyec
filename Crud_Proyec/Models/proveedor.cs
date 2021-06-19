@@ -18,7 +18,7 @@ namespace Crud_Proyec.Models
         public proveedor()
         {
             this.producto = new HashSet<producto>();
-        }
+         }
     
         public int id { get; set; }
         public string nombre { get; set; }

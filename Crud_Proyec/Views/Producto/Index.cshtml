@@ -6,21 +6,21 @@
 <h2>Producto</h2>
 
 <p>
-    @Html.ActionLink("Nuevo Producto", "Create")
+    @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            Nombre
+            @Html.DisplayNameFor(model => model.nombre)
         </th>
         <th>
-            Precio Unitario
+            @Html.DisplayNameFor(model => model.percio_unitario)
         </th>
         <th>
-            Descripcion
+            @Html.DisplayNameFor(model => model.descripcion)
         </th>
         <th>
-            Cantidad
+            @Html.DisplayNameFor(model => model.cantidad)
         </th>
         <th>
             Proveedor
@@ -47,9 +47,9 @@
                 @Crud_Proyec.Controllers.ProductoController.NombreProveedor(item.id_proveedor)
             </td>
             <td>
-                @Html.ActionLink("Editar", "Edit", new { id = item.id }) |
-                @Html.ActionLink("Detalles", "Details", new { id = item.id }) |
-                @Html.ActionLink("Eliminar", "Delete", new { id = item.id }, new { @class = "linkDelete" })
+                @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.id }, new { @class = "linkDelete" })
             </td>
         </tr>
     }
@@ -65,4 +65,3 @@
         })
     </script>
 }
-

@@ -4,34 +4,34 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>Detalle</h2>
 
 <div>
     <h4>producto_compra</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
+            Compra
+        </dt>
+
+        <dd>
+            @Crud_Proyec.Controllers.ProductoCompraController.NombreCompra(Model.id_compra)
+        </dd>
+
+        <dt>
+            Producto
+        </dt>
+
+        <dd>
+            @Crud_Proyec.Controllers.ProductoCompraController.NombreProducto(Model.id_producto)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.cantidad)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.cantidad)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.compra.id)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.compra.id)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.producto.nombre)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.producto.nombre)
         </dd>
 
     </dl>

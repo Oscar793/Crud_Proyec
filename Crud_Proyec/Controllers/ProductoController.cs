@@ -27,7 +27,7 @@ namespace Crud_Proyec.Controllers
             }
         }
 
-        public ActionResult ListarProveedores()
+        public ActionResult ListarProveedor()
         {
             using (var db = new inventario2021Entities())
             {

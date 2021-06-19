@@ -1,11 +1,15 @@
 ﻿@model Crud_Proyec.Models.producto
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Producto</h2>
 
 @{
     ViewBag.Title = "Create";
 }
 
-<h2>Nuevo Producto</h2>
-<p>En este formulario podra registrar un nuevo producto.</p>
+<h2>Create</h2>
 
 @using (Html.BeginForm())
 {
@@ -16,7 +20,7 @@
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            <label class="control-label col-md-2" for="nombre">Nombre del Producto</label>
+            @Html.LabelFor(model => model.nombre, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.nombre, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.nombre, "", new { @class = "text-danger" })
@@ -24,7 +28,7 @@
         </div>
 
         <div class="form-group">
-            <label class="control-label col-md-2" for="percio_unitario">Precio Unitario</label>
+            @Html.LabelFor(model => model.percio_unitario, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.percio_unitario, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.percio_unitario, "", new { @class = "text-danger" })
@@ -32,7 +36,7 @@
         </div>
 
         <div class="form-group">
-            <label class="control-label col-md-2" for="descripcion">Descripcion Producto</label>
+            @Html.LabelFor(model => model.descripcion, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.descripcion, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.descripcion, "", new { @class = "text-danger" })
@@ -40,7 +44,7 @@
         </div>
 
         <div class="form-group">
-            <label class="control-label col-md-2" for="cantidad">Cantidad Producto</label>
+            @Html.LabelFor(model => model.cantidad, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.cantidad, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.cantidad, "", new { @class = "text-danger" })
@@ -48,21 +52,22 @@
         </div>
 
         <div class="form-group">
-            <label class="control-label col-md-2" for="id_proveedor">Nombre Proveedor</label>
+            @Html.LabelFor(model => model.id_proveedor, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.Action("ListarProveedores")
+                @Html.Action("ListarProveedor")
                 @Html.ValidationMessageFor(model => model.id_proveedor, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Guardar" class="btn btn-default" />
+                <input type="submit" value="Create" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Regresar a la Lista", "Index")
+    @Html.ActionLink("Back to List", "Index")
 </div>
+

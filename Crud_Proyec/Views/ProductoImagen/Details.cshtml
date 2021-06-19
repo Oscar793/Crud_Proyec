@@ -4,14 +4,14 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>Detalle</h2>
 
 <div>
     <h4>producto_imagen</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.imagen)
+            Imagen
         </dt>
 
         <dd>
@@ -19,11 +19,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.producto.nombre)
+            Producto
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.producto.nombre)
+            @Crud_Proyec.Controllers.ProductoImagenController.IMGProducto(Model.id_producto)
         </dd>
 
     </dl>

@@ -9,7 +9,7 @@ namespace Crud_Proyec.Models
     public class Reporte
     {
         public String nombreProveedor { get; set; }
-
+  
         public String direccionProveedor { get; set; }
 
         public String telefonoProveedor { get; set; }
