@@ -5,7 +5,10 @@ using System.Web;
 using System.Web.Mvc;
 using Crud_Proyec.Models;
 
+
+
 namespace Crud_Proyec.Controllers
+
 {
     public class RolesController : Controller
     {
@@ -39,7 +42,7 @@ namespace Crud_Proyec.Controllers
                     db.SaveChanges();
                     return RedirectToAction("Index");
                 }
-
+                
             }
             catch (Exception ex)
             {
@@ -110,5 +113,7 @@ namespace Crud_Proyec.Controllers
                 return RedirectToAction("Index");
             }
         }
+
     }
+    
 }

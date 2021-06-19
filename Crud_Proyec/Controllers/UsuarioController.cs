@@ -11,7 +11,7 @@ namespace Crud_Proyec.Controllers
 {
     public class UsuarioController : Controller
     {
-        //[Authorize]
+        [Authorize]
         // GET: Usuario
         public ActionResult Index()
         {

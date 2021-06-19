@@ -49,10 +49,10 @@
       <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
@@ -70,8 +70,8 @@
     <Reference Include="MySql.Data, Version=8.0.20.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.8.0.20\lib\net452\MySql.Data.dll</HintPath>
     </Reference>
-    <Reference Include="MySql.Data.EntityFramework, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <HintPath>..\packages\MySql.Data.EntityFramework.8.0.11\lib\net452\MySql.Data.EntityFramework.dll</HintPath>
+    <Reference Include="MySql.Data.EntityFramework, Version=8.0.20.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.EntityFramework.8.0.20\lib\net452\MySql.Data.EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
       <HintPath>..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
@@ -286,8 +286,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Usuario\Index.cshtml" />
+    <Content Include="Views\Home\Home.cshtml" />
+    <Content Include="Views\Usuario\Usuario.cshtml" />
     <Content Include="Views\Usuario\Create.cshtml" />
     <Content Include="Views\Usuario\Edit.cshtml" />
     <Content Include="Views\Usuario\Details.cshtml" />
@@ -298,32 +298,32 @@
     <Content Include="Views\Proveedor\Edit.cshtml" />
     <Content Include="Views\Proveedor\Details.cshtml" />
     <Content Include="Views\Proveedor\Delete.cshtml" />
-    <Content Include="Views\Producto\Index.cshtml" />
+    <Content Include="Views\Producto\Producto.cshtml" />
     <Content Include="Views\Producto\Create.cshtml" />
     <Content Include="Views\Producto\Details.cshtml" />
     <Content Include="Views\Producto\Edit.cshtml" />
     <Content Include="Views\Producto\Delete.cshtml" />
     <Content Include="Views\Producto\ListarProveedor.cshtml" />
-    <Content Include="Views\Cliente\Index.cshtml" />
+    <Content Include="Views\Cliente\Cliente.cshtml" />
     <Content Include="Views\Cliente\Create.cshtml" />
     <Content Include="Views\Cliente\Edit.cshtml" />
     <Content Include="Views\Cliente\Details.cshtml" />
     <Content Include="Views\Cliente\Delete.cshtml" />
-    <Content Include="Views\Compras\Index.cshtml" />
+    <Content Include="Views\Compras\Compras.cshtml" />
     <Content Include="Views\Compras\ListarUsuario.cshtml" />
     <Content Include="Views\Compras\ListaCliente.cshtml" />
     <Content Include="Views\Compras\Details.cshtml" />
     <Content Include="Views\Compras\Delete.cshtml" />
     <Content Include="Views\Compras\Edit.cshtml" />
     <Content Include="Views\Usuario\Delete.cshtml" />
-    <Content Include="Views\ProductoCompra\Index.cshtml" />
+    <Content Include="Views\ProductoCompra\Compra Producto.cshtml" />
     <Content Include="Views\ProductoCompra\listarCompra.cshtml" />
     <Content Include="Views\ProductoCompra\ListarProducto.cshtml" />
     <Content Include="Views\ProductoCompra\Create.cshtml" />
     <Content Include="Views\ProductoCompra\Details.cshtml" />
     <Content Include="Views\ProductoCompra\Delete.cshtml" />
     <Content Include="Views\ProductoCompra\Edit.cshtml" />
-    <Content Include="Views\ProductoImagen\Index.cshtml" />
+    <Content Include="Views\ProductoImagen\Imagen Producto.cshtml" />
     <Content Include="Views\ProductoImagen\ListarIMGProducto.cshtml" />
     <Content Include="Views\ProductoImagen\Create.cshtml" />
     <Content Include="Views\ProductoImagen\Details.cshtml" />
