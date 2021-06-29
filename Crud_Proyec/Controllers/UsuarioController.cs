@@ -163,7 +163,7 @@ namespace Crud_Proyec.Controllers
             }
         }
 
-        [Authorize]
+        
         public ActionResult CloseSession()
         {
             FormsAuthentication.SignOut();

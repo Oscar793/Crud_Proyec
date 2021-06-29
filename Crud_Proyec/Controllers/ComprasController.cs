@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Crud_Proyec.Models;
+using Rotativa;
 
 namespace Crud_Proyec.Controllers
 {
@@ -139,5 +140,34 @@ namespace Crud_Proyec.Controllers
                 return View();
             }
         }
+        public ActionResult ReporteCompra()
+        {
+            try
+            {
+                var db = new inventario2021Entities();
+                var query = from tabCliente in db.cliente
+                            join tabCompra in db.compra on tabCliente.id equals tabCompra.id_cliente
+                            select new ReporteCompra
+                            {
+                                nombrecliente = tabCliente.nombre,
+                                documentocliente = tabCliente.documento,
+                                fechacompra = tabCompra.fecha,
+                                totalcompra = tabCompra.total
+
+                            };
+                return View(query);
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", "error " + ex);
+                return View();
+            }
+        }
+        public ActionResult ImprimirReporte()
+        {
+            return new ActionAsPdf("ReporteCompra") { FileName = "ReporteCompra.pdf" };
+        }
+
+
     }
 }

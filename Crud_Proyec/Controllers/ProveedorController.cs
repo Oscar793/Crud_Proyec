@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Crud_Proyec.Models;
+using Rotativa;
 
 namespace Crud_Proyec.Controllers
 {
@@ -152,10 +153,10 @@ namespace Crud_Proyec.Controllers
                     {
                         var newProveedor = new proveedor
                         {
-                            nombre = row.Split(';')[0],
-                            direccion = row.Split(';')[1],
-                            telefono = row.Split(';')[2],
-                            nombre_contacto = row.Split(';')[3],
+                            nombre = row.Split(',')[0],
+                            direccion = row.Split(',')[1],
+                            telefono = row.Split(',')[2],
+                            nombre_contacto = row.Split(',')[3],
                         };
 
                         using (var db = new inventario2021Entities())

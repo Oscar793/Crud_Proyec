@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Crud_Proyec.Models;
-
+using Rotativa;
 namespace Crud_Proyec.Controllers
 {
     public class ProductoController : Controller
@@ -153,6 +153,10 @@ namespace Crud_Proyec.Controllers
                 ModelState.AddModelError("", "error " + ex);
                 return View();
             }
+        }
+        public ActionResult ImprimirReporte()
+        {
+            return new ActionAsPdf("Index") { FileName = "reporte.pdf" };
         }
 
 
